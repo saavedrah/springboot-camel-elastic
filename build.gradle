@@ -13,8 +13,13 @@ repositories {
 }
 
 dependencies {
+	// Spring Boot
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// Camel
+	implementation platform("org.apache.camel.springboot:camel-spring-boot-bom:$CamelVersion")
+	implementation "org.apache.camel.springboot:camel-spring-boot:$CamelVersion"
 	implementation "org.apache.camel.springboot:camel-spring-boot-starter:$CamelVersion"
+	// ElasticSearch
 	implementation "org.apache.camel:camel-elasticsearch-rest:$CamelVersion"
 	implementation "org.apache.camel.springboot:camel-elasticsearch-rest-starter:$CamelVersion"
 
